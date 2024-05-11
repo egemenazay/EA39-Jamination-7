@@ -10,7 +10,7 @@ public class SoldierController : MonoBehaviour
     public float fireRate = 1f; // Ateş hızı (saniyede bir atış)
     private float nextFireTime = 0f; // Bir sonraki ateş zamanı
 
-    public float detectionRange = 5f; // Düşmanın algılama menzili
+    public float detectionRange = 55f; // Düşmanın algılama menzili
 
     void Update()
     {
@@ -31,6 +31,6 @@ public class SoldierController : MonoBehaviour
     void Shoot()
     {
         Debug.Log("mermi ateşlendi");
-        Instantiate(bulletPrefab, firePoint.position, bulletPrefab.transform.rotation);
+        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
     }
 }
