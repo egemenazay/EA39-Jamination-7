@@ -176,7 +176,8 @@ MonoBehaviour:
   speed: 5
   jumpPower: 10
   jumpCount: 0
-  jumpAmount: 2
+  jumpAmount: 1
+  banana: {fileID: 7014732183895514387, guid: d8f63c3b8cf98054bb7fdcb525f2a9e9, type: 3}
   rb: {fileID: 8083976558733822239}
   groundCheck: {fileID: 7957778478978417311}
   groundLayer:

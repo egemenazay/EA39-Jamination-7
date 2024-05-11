@@ -9,9 +9,10 @@ public class PlayerController : MonoBehaviour
     private float _horizontal;
     public float speed = 8f;
     public float jumpPower = 16f;
-    private bool isFacingRight = true;
+    public static bool isFacingRight = true;
     public int jumpCount;
     public int jumpAmount;
+    public GameObject banana;
 
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
@@ -36,6 +37,10 @@ public class PlayerController : MonoBehaviour
             jumpCount = jumpAmount;
         }
         Flip();
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            LaunchBanana();
+        }
     }
 
     private void FixedUpdate()
@@ -59,4 +64,11 @@ public class PlayerController : MonoBehaviour
         }
         
     }
+
+    private void LaunchBanana()
+    {
+        Vector3 bananaPos = new Vector3(transform.position.x + 0.1f, transform.position.y + 0.8f, transform.position.z);
+        Instantiate(banana, bananaPos, transform.rotation);
+    }
+    
 }
