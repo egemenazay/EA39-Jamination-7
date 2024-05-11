@@ -26,5 +26,11 @@ public class BananaController : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Destroy(other.gameObject);
+            Destroy(gameObject);
+        }
     }
 }

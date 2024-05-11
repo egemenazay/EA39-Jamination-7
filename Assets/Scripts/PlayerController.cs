@@ -33,7 +33,6 @@ public class PlayerController : MonoBehaviour
         }
         if (IsGrounded())
         {
-            Debug.Log("jump count fullendi");
             jumpCount = jumpAmount;
         }
         Flip();
