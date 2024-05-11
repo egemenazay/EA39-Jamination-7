@@ -1,44 +1,62 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Rigidbody2D _plyrRigidbody2D;
-    public float speed;
-    public float jumpForceValue;
-    public int jumpAmount = 2;
-    private int jumpCount;
-    public GameObject ayak;
-    private bool isGround = true;
+    private float _horizontal;
+    public float speed = 8f;
+    public float jumpPower = 16f;
+    private bool isFacingRight = true;
+    public int jumpCount;
+    public int jumpAmount;
+
+    [SerializeField] private Rigidbody2D rb;
+    [SerializeField] private Transform groundCheck;
+    [SerializeField] private LayerMask groundLayer;
+
     private void Start()
     {
-        _plyrRigidbody2D = GetComponent<Rigidbody2D>();
         jumpCount = jumpAmount;
     }
 
-    void Update()
+    private void Update()
     {
-        float horizontalInput = Input.GetAxis("Horizontal");
-        _plyrRigidbody2D.velocity = new Vector2(horizontalInput * speed, _plyrRigidbody2D.velocity.y);
-        if ((Input.GetKeyDown(KeyCode.W) && isGround == true) || ((Input.GetKeyDown(KeyCode.W) && isGround == false && jumpCount >0)))
+        _horizontal = Input.GetAxis("Horizontal");
+        if ((Input.GetKeyDown(KeyCode.W) && IsGrounded()) || (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && jumpCount>0))
         {
-            _plyrRigidbody2D.AddForce(Vector2.up * jumpForceValue, ForceMode2D.Impulse);
-            isGround = false;
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             jumpCount--;
         }
-    }
-
-
-    private void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Ground"))
+        if (IsGrounded())
         {
-            Debug.Log("Hit ground");
-            isGround = true;
+            Debug.Log("jump count fullendi");
             jumpCount = jumpAmount;
         }
+        Flip();
     }
 
+    private void FixedUpdate()
+    {
+        rb.velocity = new Vector2(_horizontal * speed, rb.velocity.y);
+    }
+
+    private bool IsGrounded()
+    {
+        return Physics2D.OverlapCircle(groundCheck.position, 0.2f, groundLayer);
+    }
+
+    private void Flip()
+    {
+        if (isFacingRight && _horizontal<0f || !isFacingRight && _horizontal>0f)
+        {
+            isFacingRight = !isFacingRight;
+            Vector3 localScale = transform.localScale;
+            localScale.x *= -1f;
+            transform.localScale = localScale;
+        }
+        
+    }
 }

@@ -174,9 +174,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  jumpForceValue: 10
+  jumpPower: 10
+  jumpCount: 0
   jumpAmount: 2
-  ayak: {fileID: 0}
+  rb: {fileID: 8083976558733822239}
+  groundCheck: {fileID: 7957778478978417311}
+  groundLayer:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!1 &3472021725278784694
 GameObject:
   m_ObjectHideFlags: 0
@@ -245,7 +250,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 4
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
