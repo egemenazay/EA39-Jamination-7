@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 9006968760505652713}
   - component: {fileID: 8083976558733822239}
   - component: {fileID: 8530465277597551169}
+  - component: {fileID: 537103709158693484}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -178,11 +179,33 @@ MonoBehaviour:
   jumpCount: 0
   jumpAmount: 1
   banana: {fileID: 7014732183895514387, guid: d8f63c3b8cf98054bb7fdcb525f2a9e9, type: 3}
+  animator: {fileID: 537103709158693484}
   rb: {fileID: 8083976558733822239}
   groundCheck: {fileID: 7957778478978417311}
   groundLayer:
     serializedVersion: 2
     m_Bits: 64
+--- !u!95 &537103709158693484
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2251440343301246960}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 2877d57ef02cc8746b948971a91a2630, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &3472021725278784694
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +233,7 @@ Transform:
   m_GameObject: {fileID: 3472021725278784694}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: -4}
+  m_LocalPosition: {x: 0, y: 0, z: -4.28}
   m_LocalScale: {x: 0.7692308, y: 0.7692308, z: 0.7692308}
   m_ConstrainProportionsScale: 0
   m_Children: []

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.PlayerLoop;
 
@@ -9,6 +10,8 @@ public class DoctorController : MonoBehaviour
     private Rigidbody2D _rb;
     public float speed;
     public float xTransformAmount = -0.6f;
+    public float health = 5f;
+    [SerializeField] private SimpleFlash _flashEffect;
     [SerializeField] private LayerMask groundLayer;
     [SerializeField] private GameObject groundCheck;
     [SerializeField] private GameObject wallCheck;
@@ -26,8 +29,13 @@ public class DoctorController : MonoBehaviour
             Flip();
             speed *= -1;
         }
-    }
 
+        if (health<0)
+        {
+            Destroy(gameObject);
+        }
+    }
+    
     private void Flip()
     {
         Vector3 localScale = transform.localScale;
@@ -42,5 +50,19 @@ public class DoctorController : MonoBehaviour
     private bool IsHitWall()
     {
         return Physics2D.OverlapCircle(wallCheck.transform.position, 0.2f, groundLayer);
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
+            Flip();
+        }
+
+        if (other.gameObject.CompareTag("Banana"))
+        {
+            _flashEffect.Flash();
+            health--;
+        }
     }
 }

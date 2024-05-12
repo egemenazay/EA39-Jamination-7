@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +8,9 @@ public class SoldierController : MonoBehaviour
     public Transform player; // Oyuncunun Transform bileşeni
     public GameObject bulletPrefab; // Mermi prefabı
     public Transform firePoint; // Mermi ateşleme noktası
-    public float fireRate = 1f; // Ateş hızı (saniyede bir atış)
+    public float fireRate = 1f;
+    public float health = 10f;
+    [SerializeField] private SimpleFlash _flashEffect;// Ateş hızı (saniyede bir atış)
     private float nextFireTime = 0f; // Bir sonraki ateş zamanı
 
     public float detectionRange = 55f; // Düşmanın algılama menzili
@@ -25,6 +28,15 @@ public class SoldierController : MonoBehaviour
                 // Bir sonraki ateş zamanını belirle
                 nextFireTime = Time.time + 1f / fireRate;
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Banana"))
+        {
+            _flashEffect.Flash();
+            health--;
         }
     }
 

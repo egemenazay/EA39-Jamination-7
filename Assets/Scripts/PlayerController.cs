@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     public int jumpCount;
     public int jumpAmount;
     public GameObject banana;
-
+    public Animator animator;
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -33,12 +33,26 @@ public class PlayerController : MonoBehaviour
         }
         if (IsGrounded())
         {
+            animator.SetBool("onAir",false);
             jumpCount = jumpAmount;
+        }
+
+        if (!IsGrounded())
+        {
+            animator.SetBool("onAir",true);
         }
         Flip();
         if (Input.GetKeyDown(KeyCode.Space))
         {
             LaunchBanana();
+        }
+        if (_horizontal !=0)
+        {
+            animator.SetBool("isMoving",true);
+        }
+        else
+        {
+            animator.SetBool("isMoving",false);
         }
     }
 
