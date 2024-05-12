@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bf3ac4c43e708b42b42a1efb24674cd
+guid: bd570157a21cc1441bde0480c5e05b32
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,97 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_0
+      name: Pixel Heart Sprite Sheet 16x16_0
       rect:
         serializedVersion: 2
-        x: 256
-        y: 261
+        x: 0
+        y: 0
         width: 16
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80da448523095c5408e065a24dcd31b0
-      internalID: 246933822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_1
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 261
-        width: 15
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c8f0c36af71abe4f92832ed47be08ca
-      internalID: -1840376620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_2
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 261
-        width: 14
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f760de09b80ce2b4b85db3c6f9748013
-      internalID: 2066687848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_3
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 261
-        width: 15
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79341c54b630edf4097f325f40db1210
-      internalID: -1014806124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_4
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 144
-        width: 28
-        height: 17
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d1fdacf450c6114c936928e5e5a237b
-      internalID: 1910413882
+      spriteID: bb9f7056d1c00ff44814e524b8f7028e
+      internalID: -1984198291
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_5
+      name: Pixel Heart Sprite Sheet 16x16_1
       rect:
         serializedVersion: 2
-        x: 289
-        y: 144
-        width: 28
-        height: 17
+        x: 16
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1de62c5fd52b342b2a96fb441f65b3
-      internalID: 624163076
+      spriteID: 9d28971b35e0c9440898b0e4d0284324
+      internalID: 87780811
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_6
+      name: Pixel Heart Sprite Sheet 16x16_2
       rect:
         serializedVersion: 2
-        x: 322
-        y: 144
-        width: 28
-        height: 17
+        x: 32
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,29 +166,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ec6c7618841c14eb8a88fa5d000fd9
-      internalID: -1263677026
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_7
-      rect:
-        serializedVersion: 2
-        x: 353
-        y: 144
-        width: 28
-        height: 17
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ff0cfaaf90822324bb92c513d456d677
-      internalID: -1179207624
+      spriteID: 582bbca0a4c69384c8f93781b8a78590
+      internalID: 834803628
       vertices: []
       indices: 
       edges: []
@@ -288,14 +183,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      All_Fire_Bullet_Pixel_16x16_0: 246933822
-      All_Fire_Bullet_Pixel_16x16_1: -1840376620
-      All_Fire_Bullet_Pixel_16x16_2: 2066687848
-      All_Fire_Bullet_Pixel_16x16_3: -1014806124
-      All_Fire_Bullet_Pixel_16x16_4: 1910413882
-      All_Fire_Bullet_Pixel_16x16_5: 624163076
-      All_Fire_Bullet_Pixel_16x16_6: -1263677026
-      All_Fire_Bullet_Pixel_16x16_7: -1179207624
+      Pixel Heart Sprite Sheet 16x16_0: -1984198291
+      Pixel Heart Sprite Sheet 16x16_1: 87780811
+      Pixel Heart Sprite Sheet 16x16_2: 834803628
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

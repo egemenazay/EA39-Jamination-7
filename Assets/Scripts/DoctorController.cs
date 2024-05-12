@@ -9,7 +9,6 @@ public class DoctorController : MonoBehaviour
 {
     private Rigidbody2D _rb;
     public float speed;
-    public float xTransformAmount = -0.6f;
     public float health = 5f;
     [SerializeField] private SimpleFlash _flashEffect;
     [SerializeField] private LayerMask groundLayer;

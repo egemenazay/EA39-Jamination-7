@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1959330349771877830}
   - component: {fileID: 2954104520590009241}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: Bullet 1
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -121,9 +121,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c3ec66419b57f4440b0d126ef3f8c52e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: 3
+  bulletSpeed: -3
   soliderRotate: {fileID: 5313985920120572412, guid: 4f7ff2821d8fd71498baec67933597c8, type: 3}
-  bulletCode: 0
+  bulletCode: 1
 --- !u!50 &1959330349771877830
 Rigidbody2D:
   serializedVersion: 4

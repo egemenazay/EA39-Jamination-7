@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 5bf3ac4c43e708b42b42a1efb24674cd
+guid: c3210a5c2ed14994490a087252302ff2
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,97 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_0
+      name: right_explode_blue-Sheet_0
       rect:
         serializedVersion: 2
-        x: 256
-        y: 261
-        width: 16
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 80da448523095c5408e065a24dcd31b0
-      internalID: 246933822
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_1
-      rect:
-        serializedVersion: 2
-        x: 273
-        y: 261
-        width: 15
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5c8f0c36af71abe4f92832ed47be08ca
-      internalID: -1840376620
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_2
-      rect:
-        serializedVersion: 2
-        x: 290
-        y: 261
-        width: 14
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f760de09b80ce2b4b85db3c6f9748013
-      internalID: 2066687848
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_3
-      rect:
-        serializedVersion: 2
-        x: 305
-        y: 261
-        width: 15
-        height: 5
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 79341c54b630edf4097f325f40db1210
-      internalID: -1014806124
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_4
-      rect:
-        serializedVersion: 2
-        x: 257
-        y: 144
-        width: 28
-        height: 17
+        x: 0
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -208,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d1fdacf450c6114c936928e5e5a237b
-      internalID: 1910413882
+      spriteID: 1e0e24e3360d86b498e4d9c25e519c9f
+      internalID: -1917627434
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_5
+      name: right_explode_blue-Sheet_1
       rect:
         serializedVersion: 2
-        x: 289
-        y: 144
-        width: 28
-        height: 17
+        x: 64
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -229,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bc1de62c5fd52b342b2a96fb441f65b3
-      internalID: 624163076
+      spriteID: aa01902ebb171074c89c55a095650e0a
+      internalID: -686949268
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_6
+      name: right_explode_blue-Sheet_2
       rect:
         serializedVersion: 2
-        x: 322
-        y: 144
-        width: 28
-        height: 17
+        x: 128
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1ec6c7618841c14eb8a88fa5d000fd9
-      internalID: -1263677026
+      spriteID: 73a0317a054f7194a8d878bcbd2c8ff3
+      internalID: -1477173750
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: All_Fire_Bullet_Pixel_16x16_7
+      name: right_explode_blue-Sheet_3
       rect:
         serializedVersion: 2
-        x: 353
-        y: 144
-        width: 28
-        height: 17
+        x: 192
+        y: 128
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -271,8 +187,155 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ff0cfaaf90822324bb92c513d456d677
-      internalID: -1179207624
+      spriteID: affda7a11fc57564686ba5a2aced3dd5
+      internalID: -863946841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd47aae1796076c42b8e09b9275fa15e
+      internalID: 558274022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdd9fd71d7d643c438100de98bbf0930
+      internalID: 1963971646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42deb9695272e7648ac48729c199bcb7
+      internalID: 1621259661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 64
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce538e71aa4b18e45a9cbc5044af453c
+      internalID: -604970629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 720d7e7db7654fa4abbd068d9f82a3a7
+      internalID: -1349763701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ad340241d9599b4a91bc436ff354807
+      internalID: -761650655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: right_explode_blue-Sheet_10
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac876e6e0ea75d4281017b24dce6ad4
+      internalID: 791347716
       vertices: []
       indices: 
       edges: []
@@ -288,14 +351,17 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      All_Fire_Bullet_Pixel_16x16_0: 246933822
-      All_Fire_Bullet_Pixel_16x16_1: -1840376620
-      All_Fire_Bullet_Pixel_16x16_2: 2066687848
-      All_Fire_Bullet_Pixel_16x16_3: -1014806124
-      All_Fire_Bullet_Pixel_16x16_4: 1910413882
-      All_Fire_Bullet_Pixel_16x16_5: 624163076
-      All_Fire_Bullet_Pixel_16x16_6: -1263677026
-      All_Fire_Bullet_Pixel_16x16_7: -1179207624
+      right_explode_blue-Sheet_0: -1917627434
+      right_explode_blue-Sheet_1: -686949268
+      right_explode_blue-Sheet_10: 791347716
+      right_explode_blue-Sheet_2: -1477173750
+      right_explode_blue-Sheet_3: -863946841
+      right_explode_blue-Sheet_4: 558274022
+      right_explode_blue-Sheet_5: 1963971646
+      right_explode_blue-Sheet_6: 1621259661
+      right_explode_blue-Sheet_7: -604970629
+      right_explode_blue-Sheet_8: -1349763701
+      right_explode_blue-Sheet_9: -761650655
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -3,6 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
+using UnityEngine.UI;
+using Image = UnityEngine.UI.Image;
 
 public class PlayerController : MonoBehaviour
 {
@@ -10,10 +14,20 @@ public class PlayerController : MonoBehaviour
     public float speed = 8f;
     public float jumpPower = 16f;
     public static bool isFacingRight = true;
+    private bool isAlive = true;
     public int jumpCount;
     public int jumpAmount;
     public GameObject banana;
     public Animator animator;
+    //Health System Vars
+    public int health;
+    public int numOfhearts;
+    
+    public Image[] hearts;
+    public Sprite fullHearth;
+    public Sprite emptyHearth;
+    
+    
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
@@ -25,40 +39,85 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
+        
         _horizontal = Input.GetAxis("Horizontal");
-        if ((Input.GetKeyDown(KeyCode.W) && IsGrounded()) || (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && jumpCount>0))
+        if (isAlive)
         {
-            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-            jumpCount--;
+            if ((Input.GetKeyDown(KeyCode.W) && IsGrounded()) || (Input.GetKeyDown(KeyCode.W) && !IsGrounded() && jumpCount>0))
+            {
+                rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+                jumpCount--;
+            }
+            if (IsGrounded())
+            {
+                animator.SetBool("onAir",false);
+                jumpCount = jumpAmount;
+            }
+
+            if (!IsGrounded())
+            {
+                animator.SetBool("onAir",true);
+            }
+            Flip();
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                LaunchBanana();
+            }
+            if (_horizontal !=0)
+            {
+                animator.SetBool("isMoving",true);
+            }
+            else
+            {
+                animator.SetBool("isMoving",false);
+            }
         }
-        if (IsGrounded())
+        //Health UI System
+        if (health > numOfhearts)
         {
-            animator.SetBool("onAir",false);
-            jumpCount = jumpAmount;
+            health = numOfhearts;
+        }
+        for (int i = 0; i < hearts.Length; i++)
+        {
+            if (i < health)
+            {
+                hearts[i].sprite = fullHearth;
+            }
+            else
+            {
+                hearts[i].sprite = emptyHearth;
+            }
+            if (i<numOfhearts)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
         }
 
-        if (!IsGrounded())
+        if (health<1)
         {
-            animator.SetBool("onAir",true);
+            animator.SetTrigger("isDead");
+            isAlive = false;
         }
-        Flip();
-        if (Input.GetKeyDown(KeyCode.Space))
+    }
+
+    private void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("Bullet"))
         {
-            LaunchBanana();
-        }
-        if (_horizontal !=0)
-        {
-            animator.SetBool("isMoving",true);
-        }
-        else
-        {
-            animator.SetBool("isMoving",false);
+            health--;
         }
     }
 
     private void FixedUpdate()
     {
-        rb.velocity = new Vector2(_horizontal * speed, rb.velocity.y);
+        if (isAlive)
+        {
+            rb.velocity = new Vector2(_horizontal * speed, rb.velocity.y);
+        }
     }
 
     private bool IsGrounded()
@@ -75,7 +134,6 @@ public class PlayerController : MonoBehaviour
             localScale.x *= -1f;
             transform.localScale = localScale;
         }
-        
     }
 
     private void LaunchBanana()

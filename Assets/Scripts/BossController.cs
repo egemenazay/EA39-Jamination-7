@@ -1,9 +1,8 @@
-using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SoldierController : MonoBehaviour
+public class BossController : MonoBehaviour
 {
     public Transform player; // Oyuncunun Transform bileşeni
     public GameObject bulletPrefab; // Mermi prefabı
