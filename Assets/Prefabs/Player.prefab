@@ -180,8 +180,8 @@ MonoBehaviour:
   jumpAmount: 1
   banana: {fileID: 7014732183895514387, guid: d8f63c3b8cf98054bb7fdcb525f2a9e9, type: 3}
   animator: {fileID: 537103709158693484}
-  health: 3
-  numOfhearts: 3
+  health: 4
+  numOfhearts: 4
   hearts:
   - {fileID: 0}
   - {fileID: 0}

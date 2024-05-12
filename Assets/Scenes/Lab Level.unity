@@ -66033,11 +66033,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5121234485881818582, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 118.31
+      value: -11.35
       objectReference: {fileID: 0}
     - target: {fileID: 5121234485881818582, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.84
+      value: -1.27
       objectReference: {fileID: 0}
     - target: {fileID: 5121234485881818582, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
       propertyPath: m_LocalPosition.z
@@ -66070,14 +66070,6 @@ PrefabInstance:
     - target: {fileID: 5121234485881818582, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8530465277597551169, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
-      propertyPath: health
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8530465277597551169, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
-      propertyPath: numOfhearts
-      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 8530465277597551169, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
       propertyPath: hearts.Array.data[0]
