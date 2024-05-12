@@ -8,6 +8,8 @@ TagManager:
   - Enemy
   - Banana
   - Bullet
+  - Trap
+  - Cage
   layers:
   - Default
   - TransparentFX

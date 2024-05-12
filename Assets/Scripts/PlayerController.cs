@@ -19,10 +19,15 @@ public class PlayerController : MonoBehaviour
     public int jumpAmount;
     public GameObject banana;
     public Animator animator;
+    public GameObject deathScreen;
+    public GameObject cage;
+    public GameObject boss;
+    public GameObject popUp;
     //Health System Vars
     public int health;
     public int numOfhearts;
-    
+    public int nextBuildIndex = 2;
+    public int currentBuildIndex;
     public Image[] hearts;
     public Sprite fullHearth;
     public Sprite emptyHearth;
@@ -101,14 +106,40 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("isDead");
             isAlive = false;
+            Invoke("StopGameTime",2f);
+        }
+
+        if (!boss.activeSelf)
+        {
+            popUp.SetActive(true);
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                cage.SetActive(false);
+                Invoke("LoadNewScene",2f);
+            }
         }
     }
 
+    private void LoadNewScene()
+    {
+        SceneManager.LoadScene(nextBuildIndex);
+    }
+    private void StopGameTime()
+    {
+        deathScreen.SetActive(true);
+        Time.timeScale = 0;
+    }
+    
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Bullet"))
+        if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Enemy"))
         {
             health--;
+        }
+
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            health = 0;
         }
     }
 
