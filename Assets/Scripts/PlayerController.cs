@@ -23,6 +23,8 @@ public class PlayerController : MonoBehaviour
     public GameObject cage;
     public GameObject boss;
     public GameObject popUp;
+    private AudioManager _audioManager;
+    
     //Health System Vars
     public int health;
     public int numOfhearts;
@@ -36,6 +38,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private Rigidbody2D rb;
     [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundLayer;
+
+    private void Awake()
+    {
+        _audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
+    }
 
     private void Start()
     {
@@ -52,6 +59,7 @@ public class PlayerController : MonoBehaviour
             {
                 rb.velocity = new Vector2(rb.velocity.x, jumpPower);
                 jumpCount--;
+                _audioManager.PlayEffect(_audioManager.jumpSFX);
             }
             if (IsGrounded())
             {
@@ -106,6 +114,7 @@ public class PlayerController : MonoBehaviour
         {
             animator.SetTrigger("isDead");
             isAlive = false;
+            deathScreen.SetActive(true);
             Invoke("StopGameTime",2f);
         }
 
@@ -126,7 +135,7 @@ public class PlayerController : MonoBehaviour
     }
     private void StopGameTime()
     {
-        deathScreen.SetActive(true);
+        
         Time.timeScale = 0;
     }
     
@@ -134,11 +143,13 @@ public class PlayerController : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Bullet") || other.gameObject.CompareTag("Enemy"))
         {
+            _audioManager.PlayEffect(_audioManager.hitSFX);
             health--;
         }
 
         if (other.gameObject.CompareTag("Trap"))
         {
+            _audioManager.PlayEffect(_audioManager.hitSFX);
             health = 0;
         }
     }
@@ -169,6 +180,7 @@ public class PlayerController : MonoBehaviour
 
     private void LaunchBanana()
     {
+        _audioManager.PlayEffect(_audioManager.throwSFX);
         Vector3 bananaPos = new Vector3(transform.position.x + 0.1f, transform.position.y + 0.8f, transform.position.z);
         Instantiate(banana, bananaPos, transform.rotation);
     }

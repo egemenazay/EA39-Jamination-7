@@ -201,7 +201,7 @@ MonoBehaviour:
   player: {fileID: 5121234485881818582, guid: 41ac70bb456c9424989bcdff76f39273, type: 3}
   bulletPrefab: {fileID: 8317986170397366694, guid: b88ed9f218b23f04387a58368da6eccc, type: 3}
   firePoint: {fileID: 1371457717115755514}
-  fireRate: 1
+  fireRate: 0.7
   health: 5
   _flashEffect: {fileID: 1328499857293884782}
   detectionRange: 10

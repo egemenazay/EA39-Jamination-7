@@ -10,6 +10,7 @@ TagManager:
   - Bullet
   - Trap
   - Cage
+  - Audio
   layers:
   - Default
   - TransparentFX
